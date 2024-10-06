@@ -41,6 +41,8 @@ dependencies:
   hexcolor: ^3.0.1
   conditional_builder_null_safety: ^0.0.6
   flutter_launcher_icons: ^0.13.1
+  flutter_screenutil: ^5.9.3
+  file_picker: ^8.0.5
 
 flutter_icons:
   android: true
@@ -58,7 +60,6 @@ dev_dependencies:
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
   bloc: ^8.1.0
-  image_picker: ^1.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -88,17 +89,33 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
-  #   - family: Trajan Pro
-  #     fonts:
-  #       - asset: fonts/TrajanPro.ttf
-  #       - asset: fonts/TrajanPro_Bold.ttf
-  #         weight: 700
-  #
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-Black.ttf
+        - asset: assets/fonts/Poppins-BlackItalic.ttf
+        - asset: assets/fonts/Poppins-Bold.ttf
+        - asset: assets/fonts/Poppins-BoldItalic.ttf
+        - asset: assets/fonts/Poppins-ExtraBold.ttf
+        - asset: assets/fonts/Poppins-ExtraBoldItalic.ttf
+        - asset: assets/fonts/Poppins-ExtraLight.ttf
+        - asset: assets/fonts/Poppins-ExtraLightItalic.ttf
+        - asset: assets/fonts/Poppins-Italic.ttf
+        - asset: assets/fonts/Poppins-Medium.ttf
+        - asset: assets/fonts/Poppins-MediumItalic.ttf
+        - asset: assets/fonts/Poppins-Regular.ttf
+        - asset: assets/fonts/Poppins-SemiBold.ttf
+        - asset: assets/fonts/Poppins-SemiBoldItalic.ttf
+        - asset: assets/fonts/Poppins-Thin.ttf
+        - asset: assets/fonts/Poppins-ThinItalic.ttf
+          style: italic
+    - family: Glegoo
+      fonts:
+        - asset: assets/fonts/Glegoo-Regular.ttf
+        - asset: assets/fonts/Glegoo-Bold.ttf
+    - family: Gabriela
+      fonts:
+        - asset: assets/fonts/Gabriela-Regular.ttf
+
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

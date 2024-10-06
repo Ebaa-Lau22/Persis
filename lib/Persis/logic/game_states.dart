@@ -30,3 +30,7 @@ class PerformBotMoveState extends GameStates {}
 
 class ChangeGamePlayState extends GameStates {}
 
+class HoverState extends GameStates{}
+
+class ChangePageState extends GameStates{}
+

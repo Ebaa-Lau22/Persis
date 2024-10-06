@@ -16,6 +16,40 @@ class GameCubit extends Cubit<GameStates> {
 
   static GameCubit get(context) => BlocProvider.of(context);
 
+  ///////
+  int selectedTile = 0;
+  void updateSelected(index){
+    selectedTile = index;
+    emit(WinningState());
+  }
+  Text? selectedText;
+  void changeText(Text? t){
+    selectedText = t;
+    emit(UpdateBoardState());
+  }
+  int selectedPage = 1;
+  void changeEmpTablePage(int page){
+    selectedPage = page;
+    emit(ChangePageState());
+  }
+
+  bool empTableRightClickHovered = false;
+  bool empTableLeftClickHovered = false;
+  void hoverClick(int direction){
+    if(direction == -1) empTableLeftClickHovered = true;
+    else empTableRightClickHovered = true;
+    emit(HoverState());
+  }
+  void cancelHoverClick(int direction){
+    if(direction == -1) empTableLeftClickHovered = false;
+    else empTableRightClickHovered = false;
+    emit(HoverState());
+  }
+  //emit(WinningState);
+  //emit(PerformBotMoveState);
+
+  ///////
+
   Player player1 = Player(
       isPlayer2: false,
       name: 'فريال',
